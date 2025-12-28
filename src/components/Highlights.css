@@ -1,0 +1,33 @@
+
+.highlights {
+  background-color: #ffffff;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+}
+
+.highlight-item {
+  padding: 1.2rem 1.3rem;
+  border-radius: 18px;
+  border: 1px dashed rgba(148, 163, 184, 0.7);
+  background: linear-gradient(
+    135deg,
+    rgba(219, 234, 254, 0.55),
+    rgba(204, 251, 241, 0.55)
+  );
+}
+
+.highlight-item h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: var(--primary-dark);
+}
+
+.highlight-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}

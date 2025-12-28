@@ -1,0 +1,38 @@
+
+.about {
+  background-color: #ffffff;
+}
+
+.about p {
+  font-size: 0.96rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.about-cards {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.info-card {
+  background: linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.08),
+      rgba(45, 212, 191, 0.08)
+    ),
+    var(--white);
+  border-radius: 16px;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}

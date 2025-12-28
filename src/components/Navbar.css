@@ -1,0 +1,154 @@
+
+
+
+ /* === Base (yours — unchanged) === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-main {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+}
+
+.logo-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.92rem;
+}
+
+.nav-links a {
+  position: relative;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-dark);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ========================= */
+/*      Hamburger Button     */
+/* ========================= */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.menu-btn span {
+  width: 26px;
+  height: 3px;
+  background: var(--primary-dark);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Animate X */
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ========================= */
+/*       Mobile Menu         */
+/* ========================= */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  background: white;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu a {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.mobile-menu.show {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ========================= */
+/*      Responsive Rules     */
+/* ========================= */
+@media (max-width: 768px) {
+
+  /* Hide desktop links */
+  .nav-links.desktop {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .menu-btn {
+    display: flex;
+  }
+}

@@ -1,0 +1,18 @@
+
+.footer {
+  background-color: #020617;
+  color: #e5e7eb;
+  padding: 1.4rem 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.footer-tagline {
+  color: #9ca3af;
+}
