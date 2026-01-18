@@ -25,11 +25,36 @@
   height: 64px;
 }
 
+
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.logo-text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .logo-img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+
+
 
 .logo-main {
   font-weight: 700;

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./Navbar.css";
-
+import logo from "../components/images/logo-removebg-preview.png"
 
 export default function Navbar() {
 
@@ -25,17 +25,29 @@ useEffect(() => {
       <div className="container nav-content">
 
         {/* Logo */}
-        <div className="logo">
-          <span className="logo-main">Siddhartha</span>
-          <span className="logo-sub">Health &amp; Multicare Pvt. Ltd.</span>
-        </div>
+       <div className="logo">
+  <img
+    src={logo}
+    alt="Siddhartha Health & Multicare"
+    className="logo-img"
+  />
+
+  <div className="logo-text">
+    <span className="logo-main">Siddhartha</span>
+    <span className="logo-sub">Health &amp; Multicare Pvt. Ltd.</span>
+  </div>
+</div>
+
 
         {/* Desktop Links */}
         <nav className="nav-links desktop">
-          <a href="#hero">Home</a>
+          <a href="#">Home</a>
+           <a href="#doctorsit">Doctor's</a>
+            <a href="#services">Services</a>
           <a href="#about">About</a>
-          <a href="#services">Services</a>
+         
           <a href="#contact">Contact</a>
+           <a href="#googlemap">Google Map</a>
         </nav>
 
         {/* Hamburger Button */}
@@ -52,10 +64,14 @@ useEffect(() => {
 
       {/* Mobile Menu */}
       <nav className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-        <a onClick={closeMenu} href="#hero">Home</a>
+        <a onClick={closeMenu} href="#">Home</a>
+      
+        <a onClick={closeMenu} href="#doctorsit">Doctor's</a>
+         <a onClick={closeMenu} href="#services">Services</a>
         <a onClick={closeMenu} href="#about">About</a>
-        <a onClick={closeMenu} href="#services">Services</a>
+       
         <a onClick={closeMenu} href="#contact">Contact</a>
+         <a onClick={closeMenu} href="#googlemap">Google Map</a>
       </nav>
     </header>
 

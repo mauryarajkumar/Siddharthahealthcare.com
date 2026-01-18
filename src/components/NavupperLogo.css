@@ -1,0 +1,125 @@
+/* =========================
+   BASE STYLES
+========================= */
+.navbar-top {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+   LOGO
+========================= */
+.navbar-logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.navbar-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar-social a {
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Brand Colors */
+.navbar-social a:nth-child(1):hover {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.navbar-social a:nth-child(2):hover {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.navbar-social a:nth-child(3):hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+.navbar-social a:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET (≤ 992px)
+========================= */
+@media (max-width: 992px) {
+  .navbar-logo img {
+    height: 60px;
+    width: 200px;
+  }
+
+  .navbar-social a {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   MOBILE (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 8px 12px;
+  }
+
+  .navbar-logo img {
+    height: 46px;
+  }
+
+  .navbar-social {
+    gap: 10px;
+  }
+
+  .navbar-social a {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (≤ 480px)
+========================= */
+@media (max-width: 480px) {
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .navbar-social a {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+}
