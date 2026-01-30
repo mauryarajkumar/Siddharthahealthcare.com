@@ -65,6 +65,10 @@
   background-color: #198754;
   color: #fff;
 }
+.navbar-social a:nth-child(4):hover {
+  background-color: #72ab1c;
+  color: #fff;
+}
 
 .navbar-social a:hover {
   transform: translateY(-2px);
@@ -96,15 +100,16 @@
 
   .navbar-logo img {
     height: 46px;
+    /* width: 150px; */
   }
 
   .navbar-social {
-    gap: 10px;
+    gap: 5px;
   }
 
   .navbar-social a {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     font-size: 14px;
   }
 }

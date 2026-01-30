@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavupperLogo.css";
 import headerimg from "../components/images/Header.jpeg"
-import { FaFacebookF, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import { FaFacebookF, FaWhatsapp, FaPhoneAlt ,FaEnvelope  } from "react-icons/fa";
 
 function NavupperLogo() {
   return (
@@ -39,6 +39,14 @@ function NavupperLogo() {
           <a href="tel:+9779821558535" aria-label="Call">
             <FaPhoneAlt />
           </a>
+           
+<a
+  href="mailto:siddharthahealthandmulticare@gmail.com"
+  aria-label="Email"
+>
+  <FaEnvelope />
+</a>
+          
         </div>
       </div>
     </header>
