@@ -1,4 +1,4 @@
-
+/* 
 .services {
   background: radial-gradient(
       circle at top,
@@ -44,4 +44,60 @@
   margin: 0;
   font-size: 0.9rem;
   color: var(--muted);
+} */
+
+
+
+.services {
+  background: radial-gradient(
+      circle at top,
+      rgba(219, 234, 254, 0.6),
+      transparent 55%
+    ),
+    var(--bg);
+}
+
+.services-grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.service-card {
+  background-color: var(--white);
+  border-radius: 18px;
+  padding: 1.2rem 1.3rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 28px rgba(148, 163, 184, 0.18);
+}
+
+.service-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.service-card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+/* ✅ LIST STYLE */
+.service-list {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+
+.service-list li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
 }
