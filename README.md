@@ -4,7 +4,7 @@ A modern, responsive healthcare clinic website built using React + Vite, designe
 
 🚀 Live Demo
 
-🔗 Website: https://siddharthahealthcare.com/
+🔗 Website: https://shmulticare.com.np/
 
 📍 Location: Bhairahawa, Nepal
 
@@ -122,6 +122,4 @@ Your Name : Rajkumar Maurya
 Frontend Developer
 📧 Email: mauryarajkumar21424@gmail.com
 
-If you want, I can also:
 
-🔹 Customize this for Git
