@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./Hero.css";
 
-/* 🔹 IMPORT IMAGES */
+/*  IMPORT IMAGES */
 import pediImg from "../components/images/Specailization/Pedi.png";
 import gynoImg from "../components/images/Specailization/Gyno.png";
 import entImg from "../components/images/Specailization/Ent.png";
@@ -10,12 +10,12 @@ import dermaImg from "../components/images/Specailization/Derma.png";
 import orthoImg from "../components/images/Specailization/ortho.png";
 
 export default function Hero() {
-  // 🔹 Doctor data
+  //  Doctor data
   const doctors = [
     {
       image: pediImg,
       name: "Dr. Dinesh Chaudhary",
-      specialty: "👶 बाल रोग विशेषज्ञ (Pediatrician Consultant)",
+      specialty: " बाल रोग विशेषज्ञ (Pediatrician Consultant)",
     },
     {
       image: gynoImg,
@@ -25,33 +25,35 @@ export default function Hero() {
     {
       image: entImg,
       name: "Dr. Roshan Acharya",
-      specialty: "👂👃👄 कान, नाक, घाँटी विशेषज्ञ (ENT Specialist)",
+      specialty: " कान, नाक, घाँटी विशेषज्ञ (ENT Specialist)",
     },
     {
       image: dermaImg,
       name: "Dr. Meera Shrestha",
-      specialty: "🌸 छाला रोग विशेषज्ञ (Dermatologist)",
+      specialty: " छाला रोग विशेषज्ञ (Dermatologist)",
     },
     {
       image: orthoImg,
       name: "Dr. Keshar Jung Karki",
-      specialty: "🦴 हाडजोर्नी विशेषज्ञ (Orthopedic Specialist)",
+      specialty: " हाडजोर्नी विशेषज्ञ (Orthopedic Specialist)",
     },
   ];
 
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  // 🔄 Auto slide every 6 seconds
+  //  Auto slide every 6 seconds
   useEffect(() => {
+    if (paused) return;
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % doctors.length);
     }, 6000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [paused, doctors.length]);
 
   return (
-    <section id="hero" className="hero">
+    <section id="hero" className="xyz">
       <div className="container hero-grid">
 
         {/* LEFT SIDE TEXT */}
@@ -77,7 +79,7 @@ export default function Hero() {
 
           <div className="hero-contact">
             <p>
-              📍 Siddharthnagar-7, New Road, Bhairahawa <br />
+               Siddharthnagar-7, New Road, Bhairahawa <br />
               📞 <a href="tel:+9779821558535">+977 9821558535</a>
             </p>
           </div>
@@ -87,7 +89,9 @@ export default function Hero() {
         <div className="hero-image">
           <div className="doctor-card">
 
-            <div className="doctor-slider">
+            <div className="doctor-slider" onMouseEnter={() => setPaused(true)}
+              onMouseLeave={() => setPaused(false)}
+            >
               <img
                 src={doctors[index].image}
                 alt={doctors[index].name}

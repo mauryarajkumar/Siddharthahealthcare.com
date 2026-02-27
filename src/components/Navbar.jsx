@@ -1,7 +1,7 @@
 
 
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../components/images/logo-removebg-preview.png"
 
@@ -41,13 +41,22 @@ useEffect(() => {
 
         {/* Desktop Links */}
         <nav className="nav-links desktop">
-          <a href="#">Home</a>
-           <a href="#doctorsit">Doctor's</a>
-            <a href="#services">Services</a>
-          <a href="#about">About</a>
+          {/* <a href="#">Home</a> */}
+          {/* <Link to="/">Home</Link> */}
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>  Home </Link>
+
+           {/* <a href="#doctorsit">Doctor's</a> */}
+           <Link to="/doctors" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}> Doctor's</Link>
+
+            {/* <a href="#services">Our Services</a> */}
+             <Link to="/services" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Our Services</Link>
+          {/* <a href="#about">About Us</a> */}
+            <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>About Us</Link>
          
-          <a href="#contact">Contact</a>
-           <a href="#googlemap">Google Map</a>
+          {/* <a href="#contact">Contact Us</a> */}
+              <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Contact Us</Link>
+           {/* <a href="#googlemap">Google Map</a> */}
+              <Link to="/googlemap" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Google Map</Link>
         </nav>
 
         {/* Hamburger Button */}
@@ -63,15 +72,16 @@ useEffect(() => {
       </div>
 
       {/* Mobile Menu */}
-      <nav className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-        <a onClick={closeMenu} href="#">Home</a>
       
-        <a onClick={closeMenu} href="#doctorsit">Doctor's</a>
-         <a onClick={closeMenu} href="#services">Services</a>
-        <a onClick={closeMenu} href="#about">About</a>
-       
-        <a onClick={closeMenu} href="#contact">Contact</a>
-         <a onClick={closeMenu} href="#googlemap">Google Map</a>
+       <nav className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+        <Link   to="/"   onClick={() => {    window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>
+  Home
+</Link>
+        <Link to="/doctors" onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>Doctor's</Link>
+        <Link to="/services" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>Our Services</Link>
+        <Link to="/about"  onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>About Us</Link>
+        <Link to="/contact" onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>Contact Us</Link>
+        <Link to="/googlemap"  onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" }); closeMenu();  }}>Google Map</Link>
       </nav>
     </header>
 

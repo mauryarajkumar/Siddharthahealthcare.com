@@ -3,7 +3,7 @@ import "./Googlemap.css";
 
 function Googlemap() {
   return (
-    <section id="googlemap" className="map-section">
+    <section id="googlemap" className="map-section googlemap">
       <div className="map-container">
 
         {/* Google Maps Embed (Correct URL) */}

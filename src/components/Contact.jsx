@@ -34,7 +34,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* ⭐ FORMSTART ⭐ */}
+        {/* Form Submit */}
         <form
           className="contact-form"
           action="https://formsubmit.co/siddharthahealthandmulticare@gmail.com"
@@ -93,7 +93,7 @@ export default function Contact() {
             Submit
           </button>
         </form>
-        {/* ⭐ FORM END ⭐ */}
+        {/*  FORM END */}
       </div>
     </section>
   )

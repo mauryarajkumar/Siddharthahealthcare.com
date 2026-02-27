@@ -1,0 +1,46 @@
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.video-modal video {
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  border-radius: 14px;
+}
+
+/* CLOSE BUTTON (IMPORTANT) */
+.close-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 1.6rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .video-modal video {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .close-btn {
+    top: 12px;
+    right: 12px;
+  }
+}

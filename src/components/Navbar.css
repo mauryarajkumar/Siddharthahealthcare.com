@@ -1,7 +1,7 @@
 
 
 
- /* === Base (yours — unchanged) === */
+ /* Base (yours — unchanged)  */
 .navbar {
   position: sticky;
   top: 0;
@@ -100,9 +100,9 @@
   width: 100%;
 }
 
-/* ========================= */
+
 /*      Hamburger Button     */
-/* ========================= */
+
 .menu-btn {
   display: none;
   flex-direction: column;
@@ -134,9 +134,9 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* ========================= */
+
 /*       Mobile Menu         */
-/* ========================= */
+
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -162,9 +162,9 @@
   pointer-events: all;
 }
 
-/* ========================= */
+
 /*      Responsive Rules     */
-/* ========================= */
+
 @media (max-width: 768px) {
 
   /* Hide desktop links */

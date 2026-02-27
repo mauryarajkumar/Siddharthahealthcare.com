@@ -19,25 +19,25 @@ const doctors = [
   },
    {
     name: "Dr.Sandhya Maharjan ",
-    specialization: "👩‍⚕️ स्त्री तथा प्रसूति रोग विशेषज्ञ (Gynecologist & Obstetrician)",
+    specialization: "स्त्री तथा प्रसूति रोग विशेषज्ञ (Gynecologist & Obstetrician)",
     // experience: "10+ Years Experience",
     image:gynoImg
   },
    {
     name: "Dr. Roshan Acharya",
-    specialization: "👂👃👄 कान, नाक, घाँटी विशेषज्ञ (ENT Specialist)",
+    specialization: "कान, नाक, घाँटी विशेषज्ञ (ENT Specialist)",
     // experience: "10+ Years Experience",
     image: entImg
   },
    {
     name: "Dr. Meera Shrestha",
-    specialization: "🌸 छाला रोग विशेषज्ञ (Dermatologist)",
+    specialization: "छाला रोग विशेषज्ञ (Dermatologist)",
     // experience: "8+ Years Experience",
     image: dermaImg
   },
   {
     name: "Dr. Keshar Jung Karki",
-    specialization: "🦴 हाडजोर्नी विशेषज्ञ (Orthopedic Specialist)",
+    specialization: "हाडजोर्नी विशेषज्ञ (Orthopedic Specialist)",
     // experience: "10+ Years Experience",
     image: orthoImg
   },
@@ -54,7 +54,7 @@ function DoctorList() {
   };
 
   return (
-    <section id="doctorsit" className="doctor-section">
+    <section id="doctorsit"  className="doctor-section doctors">
       <h2 className="doctor-title">Our Specialist Doctors</h2>
 
       <div className="doctor-grid">

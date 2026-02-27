@@ -40,10 +40,13 @@
 
 .doctor-info {
   padding: 20px;
+  text-align: left;
+ 
 }
 
 .doctor-info h3 {
   font-size: 1.2rem;
+
   color: #0f172a;
   margin-bottom: 5px;
 }
